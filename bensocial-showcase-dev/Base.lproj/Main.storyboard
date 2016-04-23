@@ -167,10 +167,31 @@
                             <constraint firstItem="WqM-HS-tOx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yok-fE-IVO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="v7A-GQ-oKS" kind="show" identifier="loggedIn" id="Lg2-us-Y8u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="355"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MTE-ge-8NN">
+            <objects>
+                <viewController storyboardIdentifier="loggedIn" id="v7A-GQ-oKS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZkM-gZ-v02"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tec-GX-w1A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Oi5-HQ-iwP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.2953774757" green="0.54695056500000006" blue="0.96056892770000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDs-wT-SsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="355"/>
         </scene>
     </scenes>
     <resources>

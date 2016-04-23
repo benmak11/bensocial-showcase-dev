@@ -24,6 +24,7 @@
 		A72769F81CCC144D00EFEE28 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72769F51CCC144D00EFEE28 /* Bolts.framework */; };
 		A72769F91CCC144D00EFEE28 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72769F61CCC144D00EFEE28 /* FBSDKCoreKit.framework */; };
 		A72769FA1CCC144D00EFEE28 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72769F71CCC144D00EFEE28 /* FBSDKLoginKit.framework */; };
+		A7FCFD951CCC20B6003180C5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD941CCC20B6003180C5 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		A72769F51CCC144D00EFEE28 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A72769F61CCC144D00EFEE28 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A72769F71CCC144D00EFEE28 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A7FCFD941CCC20B6003180C5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B7BE4CC4BEFD126FFD9EB8CD /* Pods-bensocial-showcase-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bensocial-showcase-dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-bensocial-showcase-dev/Pods-bensocial-showcase-dev.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 		A72769CC1CCBBAE700EFEE28 /* bensocial-showcase-dev */ = {
 			isa = PBXGroup;
 			children = (
+				A7FCFD911CCC204F003180C5 /* Services */,
 				A72769F41CCC143D00EFEE28 /* Frameworks */,
 				A72769ED1CCBC08500EFEE28 /* Util */,
 				A72769E11CCBBD1300EFEE28 /* Model */,
@@ -170,6 +173,14 @@
 				A72769F71CCC144D00EFEE28 /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7FCFD911CCC204F003180C5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A7FCFD941CCC20B6003180C5 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72769F31CCBC69B00EFEE28 /* MaterialTextField.swift in Sources */,
+				A7FCFD951CCC20B6003180C5 /* DataService.swift in Sources */,
 				A72769EC1CCBC04500EFEE28 /* MaterialView.swift in Sources */,
 				A72769D01CCBBAE700EFEE28 /* ViewController.swift in Sources */,
 				A72769CE1CCBBAE700EFEE28 /* AppDelegate.swift in Sources */,
@@ -427,7 +439,7 @@
 				);
 				INFOPLIST_FILE = "bensocial-showcase-dev/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.benmakusha.bensocial-showcase-dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benmakusha.bensocial-showcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -444,7 +456,7 @@
 				);
 				INFOPLIST_FILE = "bensocial-showcase-dev/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.benmakusha.bensocial-showcase-dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.benmakusha.bensocial-showcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

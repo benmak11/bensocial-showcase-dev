@@ -123,7 +123,7 @@
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXI-7O-A7Q" customClass="MaterialButton" customModule="bensocial_showcase_dev" customModuleProvider="target">
                                         <rect key="frame" x="160" y="191" width="241" height="33"/>
@@ -136,6 +136,9 @@
                                         <state key="normal" title="Login / Signup">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="attemptLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOW-P0-veU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,6 +171,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="nbe-yI-O4q" id="94V-dw-4T8"/>
+                        <outlet property="passwordField" destination="rJh-2K-4ET" id="jT4-jJ-osB"/>
                         <segue destination="v7A-GQ-oKS" kind="show" identifier="loggedIn" id="Lg2-us-Y8u"/>
                     </connections>
                 </viewController>

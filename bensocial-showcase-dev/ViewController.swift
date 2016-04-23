@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     @IBAction func fbBtnPressed(sender: UIButton!){
         let facebookLogin = FBSDKLoginManager()
         
-        facebookLogin.logInWithReadPermissions(["email"]) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
+        facebookLogin.logInWithReadPermissions(["email"], fromViewController: self) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
             
             if facebookError != nil{
                 print("Facebook login failed. Error \(facebookError)")
@@ -33,13 +33,13 @@ class ViewController: UIViewController {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 print("Successfully logged in with Facebook\(accessToken)")
                 
-                DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData  in
                     
                     if error != nil {
                         print("Login failed. \(error)")
                     } else {
                         print("Login In! \(authData)")
-                        NSUserDefaults.standardUserDefaults().setValue(authData, forKey: KEY_UID)
+                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
                         self.performSegueWithIdentifier("loggedIn", sender: nil)
                     }
                 

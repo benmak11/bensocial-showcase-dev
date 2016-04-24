@@ -1,4 +1,4 @@
-# bensocial-showcase-dev
+# Social Showcase App
 Information
 -----------
 

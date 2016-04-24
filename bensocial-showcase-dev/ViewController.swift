@@ -46,6 +46,11 @@ class ViewController: UIViewController {
                         print("Login failed. \(error)")
                     } else {
                         print("Login In! \(authData)")
+                        
+                        //Creating Firebase user
+                        let user = ["provider": authData.provider!, "blah": "test"]
+                        DataService.ds.createFirebaseUser(authData.uid, user: user)
+                        
                         NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
                         self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                     }
@@ -76,7 +81,16 @@ class ViewController: UIViewController {
                                 //Now creating account
                                 NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
                                 
-                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: nil)
+                                //DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: nil)
+                                
+                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { err, authData in
+                            
+                                    //Creating Firebase user
+                                    let user = ["provider": authData.provider!, "blah": "emailTest"]
+                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
+                                
+                                })
+                                
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }
                             

@@ -17,6 +17,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //Downloading the data for updating the UI
+        DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
+        
+            print(snapshot.value)
+        
+        })
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -11,8 +11,12 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
+            <string>NotoSans</string>
+            <string>NotoSans</string>
             <string>NotoSans</string>
             <string>NotoSans</string>
         </mutableArray>
@@ -173,17 +177,17 @@
                     <connections>
                         <outlet property="emailField" destination="nbe-yI-O4q" id="94V-dw-4T8"/>
                         <outlet property="passwordField" destination="rJh-2K-4ET" id="jT4-jJ-osB"/>
-                        <segue destination="v7A-GQ-oKS" kind="show" identifier="loggedIn" id="Lg2-us-Y8u"/>
+                        <segue destination="thB-ib-EVq" kind="show" identifier="loggedIn" id="Lg2-us-Y8u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325" y="355"/>
         </scene>
-        <!--View Controller-->
+        <!--FeedVC-->
         <scene sceneID="MTE-ge-8NN">
             <objects>
-                <viewController storyboardIdentifier="loggedIn" id="v7A-GQ-oKS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loggedIn" id="v7A-GQ-oKS" customClass="FeedVC" customModule="bensocial_showcase_dev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZkM-gZ-v02"/>
                         <viewControllerLayoutGuide type="bottom" id="Tec-GX-w1A"/>
@@ -191,10 +195,141 @@
                     <view key="view" contentMode="scaleToFill" id="Oi5-HQ-iwP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.2953774757" green="0.54695056500000006" blue="0.96056892770000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="355" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gnX-lw-wpP">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="355" id="R1S-K3-Fkc" customClass="PostCell" customModule="bensocial_showcase_dev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="560" height="355"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R1S-K3-Fkc" id="XOZ-RD-W4H">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="354.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JYn-OG-9aV" userLabel="Container" customClass="MaterialView" customModule="bensocial_showcase_dev" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="8" width="560" height="339"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="E4O-13-gDC">
+                                                            <rect key="frame" x="8" y="8" width="544" height="323"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vP2-RY-3OE">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="544" height="50"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="MSQ-Ta-yJ5">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="50" id="GP3-zg-D7C"/>
+                                                                                <constraint firstAttribute="height" constant="50" id="vav-GM-QZI"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="demonslayer31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="Xuh-w8-4oT">
+                                                                            <rect key="frame" x="60" y="0.0" width="157" height="50"/>
+                                                                            <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                                                            <color key="textColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="uRw-uH-4MJ">
+                                                                            <rect key="frame" x="227" y="0.0" width="181.5" height="50"/>
+                                                                        </imageView>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hse-hn-60y">
+                                                                            <rect key="frame" x="418.5" y="0.0" width="125.5" height="50"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1444" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCd-ar-6zt">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="125.5" height="24"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="24" id="IfM-Lq-ci0"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr6-H0-5m1">
+                                                                                    <rect key="frame" x="0.0" y="24" width="125.5" height="26"/>
+                                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
+                                                                                    <color key="textColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QxG-jW-N6e">
+                                                                    <rect key="frame" x="0.0" y="55" width="544" height="70"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="BFz-ak-F35"/>
+                                                                    </constraints>
+                                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                                </textView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="0MH-wV-UMC">
+                                                                    <rect key="frame" x="0.0" y="130" width="544" height="193"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="E4O-13-gDC" secondAttribute="trailing" id="2Fh-Fe-bXs"/>
+                                                        <constraint firstItem="E4O-13-gDC" firstAttribute="top" secondItem="JYn-OG-9aV" secondAttribute="topMargin" id="GCQ-3c-KuO"/>
+                                                        <constraint firstItem="E4O-13-gDC" firstAttribute="leading" secondItem="JYn-OG-9aV" secondAttribute="leadingMargin" id="IAS-Cv-6yv"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="E4O-13-gDC" secondAttribute="bottom" id="o1D-2Q-jVZ"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JYn-OG-9aV" firstAttribute="leading" secondItem="XOZ-RD-W4H" secondAttribute="leading" id="FgJ-XF-cGA"/>
+                                                <constraint firstAttribute="trailing" secondItem="JYn-OG-9aV" secondAttribute="trailing" id="c4j-RC-0PN"/>
+                                                <constraint firstItem="JYn-OG-9aV" firstAttribute="centerY" secondItem="XOZ-RD-W4H" secondAttribute="centerY" id="v8M-kp-Uy0"/>
+                                                <constraint firstItem="JYn-OG-9aV" firstAttribute="top" secondItem="XOZ-RD-W4H" secondAttribute="topMargin" id="xCe-W5-EWy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="profileImg" destination="MSQ-Ta-yJ5" id="9f2-iw-7yy"/>
+                                            <outlet property="showcaseImg" destination="0MH-wV-UMC" id="tiU-9B-Lyk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Tec-GX-w1A" firstAttribute="top" secondItem="gnX-lw-wpP" secondAttribute="bottom" id="F7q-ZC-yXi"/>
+                            <constraint firstItem="gnX-lw-wpP" firstAttribute="top" secondItem="ZkM-gZ-v02" secondAttribute="bottom" id="I0L-kU-NYm"/>
+                            <constraint firstItem="gnX-lw-wpP" firstAttribute="trailing" secondItem="Oi5-HQ-iwP" secondAttribute="trailingMargin" id="tM6-Vo-C9z"/>
+                            <constraint firstItem="gnX-lw-wpP" firstAttribute="leading" secondItem="Oi5-HQ-iwP" secondAttribute="leadingMargin" id="wMh-8v-Dz5"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DwT-5L-ovu"/>
+                    <connections>
+                        <outlet property="tableView" destination="gnX-lw-wpP" id="Acc-0R-lUH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDs-wT-SsZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818" y="355"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fIU-Gh-yuB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thB-ib-EVq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zlE-Fu-7XR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="v7A-GQ-oKS" kind="relationship" relationship="rootViewController" id="S7r-qQ-nXH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yy5-hF-qOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1006" y="355"/>
         </scene>
@@ -202,5 +337,8 @@
     <resources>
         <image name="code-icon-logo" width="318" height="281"/>
         <image name="fb-icon" width="65" height="65"/>
+        <image name="heart-empty" width="150" height="147"/>
+        <image name="profile" width="100" height="104"/>
+        <image name="screen" width="300" height="534"/>
     </resources>
 </document>

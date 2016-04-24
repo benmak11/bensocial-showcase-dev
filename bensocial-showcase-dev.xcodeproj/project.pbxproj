@@ -25,6 +25,8 @@
 		A72769F91CCC144D00EFEE28 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72769F61CCC144D00EFEE28 /* FBSDKCoreKit.framework */; };
 		A72769FA1CCC144D00EFEE28 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72769F71CCC144D00EFEE28 /* FBSDKLoginKit.framework */; };
 		A7FCFD951CCC20B6003180C5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD941CCC20B6003180C5 /* DataService.swift */; };
+		A7FCFD971CCC3EFD003180C5 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD961CCC3EFD003180C5 /* FeedVC.swift */; };
+		A7FCFD991CCC3FA8003180C5 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD981CCC3FA8003180C5 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		A72769F61CCC144D00EFEE28 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A72769F71CCC144D00EFEE28 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A7FCFD941CCC20B6003180C5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A7FCFD961CCC3EFD003180C5 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		A7FCFD981CCC3FA8003180C5 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B7BE4CC4BEFD126FFD9EB8CD /* Pods-bensocial-showcase-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bensocial-showcase-dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-bensocial-showcase-dev/Pods-bensocial-showcase-dev.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,7 +117,6 @@
 				A72769DF1CCBBD0800EFEE28 /* Controller */,
 				A72769E21CCBBD1800EFEE28 /* Resource */,
 				A72769CD1CCBBAE700EFEE28 /* AppDelegate.swift */,
-				A72769CF1CCBBAE700EFEE28 /* ViewController.swift */,
 				A72769D11CCBBAE700EFEE28 /* Main.storyboard */,
 				A72769D41CCBBAE700EFEE28 /* Assets.xcassets */,
 				A72769D61CCBBAE700EFEE28 /* LaunchScreen.storyboard */,
@@ -125,6 +128,8 @@
 		A72769DF1CCBBD0800EFEE28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A72769CF1CCBBAE700EFEE28 /* ViewController.swift */,
+				A7FCFD961CCC3EFD003180C5 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 		A72769E01CCBBD0F00EFEE28 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A7FCFD981CCC3FA8003180C5 /* PostCell.swift */,
 				A72769EB1CCBC04500EFEE28 /* MaterialView.swift */,
 				A72769F01CCBC42900EFEE28 /* MaterialButton.swift */,
 				A72769F21CCBC69B00EFEE28 /* MaterialTextField.swift */,
@@ -314,6 +320,8 @@
 				A7FCFD951CCC20B6003180C5 /* DataService.swift in Sources */,
 				A72769EC1CCBC04500EFEE28 /* MaterialView.swift in Sources */,
 				A72769D01CCBBAE700EFEE28 /* ViewController.swift in Sources */,
+				A7FCFD971CCC3EFD003180C5 /* FeedVC.swift in Sources */,
+				A7FCFD991CCC3FA8003180C5 /* PostCell.swift in Sources */,
 				A72769CE1CCBBAE700EFEE28 /* AppDelegate.swift in Sources */,
 				A72769EF1CCBC09600EFEE28 /* Constants.swift in Sources */,
 				A72769F11CCBC42900EFEE28 /* MaterialButton.swift in Sources */,

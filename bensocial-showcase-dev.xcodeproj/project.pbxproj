@@ -27,6 +27,7 @@
 		A7FCFD951CCC20B6003180C5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD941CCC20B6003180C5 /* DataService.swift */; };
 		A7FCFD971CCC3EFD003180C5 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD961CCC3EFD003180C5 /* FeedVC.swift */; };
 		A7FCFD991CCC3FA8003180C5 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD981CCC3FA8003180C5 /* PostCell.swift */; };
+		A7FCFD9B1CCD893B003180C5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD9A1CCD893B003180C5 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		A7FCFD941CCC20B6003180C5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A7FCFD961CCC3EFD003180C5 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A7FCFD981CCC3FA8003180C5 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		A7FCFD9A1CCD893B003180C5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B7BE4CC4BEFD126FFD9EB8CD /* Pods-bensocial-showcase-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bensocial-showcase-dev.release.xcconfig"; path = "Pods/Target Support Files/Pods-bensocial-showcase-dev/Pods-bensocial-showcase-dev.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 		A72769E11CCBBD1300EFEE28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A7FCFD9A1CCD893B003180C5 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				A72769CE1CCBBAE700EFEE28 /* AppDelegate.swift in Sources */,
 				A72769EF1CCBC09600EFEE28 /* Constants.swift in Sources */,
 				A72769F11CCBC42900EFEE28 /* MaterialButton.swift in Sources */,
+				A7FCFD9B1CCD893B003180C5 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

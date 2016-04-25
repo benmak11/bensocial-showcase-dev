@@ -16,7 +16,7 @@ class Post {
     private var _username: String!
     private var _postKey: String!
     
-    var postDescription: String{
+    var postDescription: String {
         return _postDescription
     }
     
@@ -24,22 +24,22 @@ class Post {
         return _imageUrl
     }
     
-    var likes: Int{
+    var likes: Int {
         return _likes
     }
     
-    var username: String{
+    var username: String {
         return _username
     }
     
-    init(description: String, imageUrl: String?, username: String) {
+    init(description: String?, imageUrl: String?, username: String) {
         
         self._postDescription = description
         self._imageUrl = imageUrl
         self._username = username
     }
     
-    init(postKey: String, dictionary: Dictionary<String, AnyObject>){
+    init(postKey: String, dictionary: Dictionary<String, AnyObject>) {
         self._postKey = postKey
         
         if let likes = dictionary["likes"] as? Int {

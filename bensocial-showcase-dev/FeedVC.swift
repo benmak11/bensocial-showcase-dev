@@ -14,14 +14,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var postField: MaterialTextField!
-    
     @IBOutlet weak var imageSelectorImg: UIImageView!
     
     
     var posts = [Post]()
     
     // one instance of it in memory
-    static var imageCache = NSCache()
+    static let imageCache = NSCache()
     
     var imagePicker: UIImagePickerController!
     
@@ -32,12 +31,21 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         tableView.dataSource = self
         
         tableView.estimatedRowHeight = 355
+        imageSelectorImg.layer.cornerRadius = 2.0
+        imageSelectorImg.clipsToBounds = true
+        
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
+        initObservers()
+        
+    }
+    
+    func initObservers() {
+        
         //Downloading the data from Firebase
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
-        
+            
             // Test printing data
             print(snapshot.value)
             
@@ -60,6 +68,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             self.tableView.reloadData()
         })
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -68,7 +77,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return posts.count
+        return self.posts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -78,10 +87,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell{
             
+            //Cancel the image request when cellForRowAtIndexPath is called because it means
+            //we need to recycle the cell and we need the old request to stop downloading the image
             cell.request?.cancel()
             
+            //Declare an empty image variable
             var img: UIImage?
             
+            //If there is a url for an image, try and get it from the local cache first
+            //before we attempt to download it
             if let url = post.imageUrl {
                 img = FeedVC.imageCache.objectForKey(url) as? UIImage
             }
@@ -126,12 +140,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 let urlStr = "https://post.imageshack.us/upload_api.php"
                 let url = NSURL(string: urlStr)!
                 let imgData = UIImageJPEGRepresentation(img, 0.2)!
-                let keyData = "12DJKPSU5fc3afbd01b1630cc718cae3043220f3".dataUsingEncoding(NSUTF8StringEncoding)!
+                let keyData = "07BDENRW9e6fd50c983ce6e1f3e12183cb725aec".dataUsingEncoding(NSUTF8StringEncoding)!  //Using personal API Key from ImageShack: Trial account
                 let keyJSON = "json".dataUsingEncoding(NSUTF8StringEncoding)!
                 
                 Alamofire.upload(.POST, url, multipartFormData: { multipartFormData in
                     
-                    multipartFormData.appendBodyPart(data: imgData, name: "fileUpload", fileName: "image", mimeType: "image/jpg")
+                    multipartFormData.appendBodyPart(data: imgData, name: "fileupload", fileName: "image", mimeType: "image/jpg")
                     multipartFormData.appendBodyPart(data: keyData, name: "key")
                     multipartFormData.appendBodyPart(data: keyJSON, name: "format")
                     
@@ -140,14 +154,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                     switch encodingResult {
                     case .Success(let upload, _, _):
                         
-                        upload.responseJSON(completionHandler: { request, response, result in
+                        upload.responseJSON(completionHandler: { response in
                             
-                            if let info = result.value as? Dictionary<String, AnyObject> {
+                            print(response.result.value)
+                            if let info = response.result.value as? Dictionary<String, AnyObject> {
                                 
                                 if let links = info["links"] as? Dictionary<String, AnyObject> {
                                     if let imgLink = links["image_link"] as? String {
                                         print("LINK: \(imgLink)")
-                                        self.postToFirebase(imgLink)
+                                        //self.postToFirebase(imgLink)
                                     }
                                 }
                             }

@@ -450,6 +450,7 @@
 					"$(PROJECT_DIR)/bensocial-showcase-dev",
 				);
 				INFOPLIST_FILE = "bensocial-showcase-dev/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.benmakusha.bensocial-showcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,6 +468,7 @@
 					"$(PROJECT_DIR)/bensocial-showcase-dev",
 				);
 				INFOPLIST_FILE = "bensocial-showcase-dev/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.benmakusha.bensocial-showcase";
 				PRODUCT_NAME = "$(TARGET_NAME)";

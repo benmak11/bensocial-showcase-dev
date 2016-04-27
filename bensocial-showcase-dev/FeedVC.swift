@@ -159,8 +159,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                             print(response.result.value)
                             if let info = response.result.value as? Dictionary<String, AnyObject> {
                                 
-                                if let links = info["links"] as? Dictionary<String, AnyObject> {
-                                    if let imgLink = links["image_link"] as? String {
+                                if let links = info["links"] as? Dictionary<String, String> {
+                                    if let imgLink = links["image_link"] as String! {
                                         print("LINK: \(imgLink)")
                                         //self.postToFirebase(imgLink)
                                     }

@@ -284,7 +284,7 @@
                                                                             <rect key="frame" x="227" y="0.0" width="182" height="50"/>
                                                                         </imageView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hse-hn-60y">
-                                                                            <rect key="frame" x="418" y="0.0" width="126" height="50"/>
+                                                                            <rect key="frame" x="419" y="0.0" width="126" height="50"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1444" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCd-ar-6zt">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="126" height="24"/>

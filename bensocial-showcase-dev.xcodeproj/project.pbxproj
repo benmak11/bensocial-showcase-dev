@@ -24,6 +24,7 @@
 		A72769F81CCC144D00EFEE28 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72769F51CCC144D00EFEE28 /* Bolts.framework */; };
 		A72769F91CCC144D00EFEE28 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72769F61CCC144D00EFEE28 /* FBSDKCoreKit.framework */; };
 		A72769FA1CCC144D00EFEE28 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72769F71CCC144D00EFEE28 /* FBSDKLoginKit.framework */; };
+		A7F4E6AB1CEDE4130077EDE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A7F4E6AA1CEDE4130077EDE3 /* GoogleService-Info.plist */; };
 		A7FCFD951CCC20B6003180C5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD941CCC20B6003180C5 /* DataService.swift */; };
 		A7FCFD971CCC3EFD003180C5 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD961CCC3EFD003180C5 /* FeedVC.swift */; };
 		A7FCFD991CCC3FA8003180C5 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FCFD981CCC3FA8003180C5 /* PostCell.swift */; };
@@ -52,6 +53,7 @@
 		A72769F51CCC144D00EFEE28 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A72769F61CCC144D00EFEE28 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A72769F71CCC144D00EFEE28 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		A7F4E6AA1CEDE4130077EDE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A7FCFD941CCC20B6003180C5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A7FCFD961CCC3EFD003180C5 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A7FCFD981CCC3FA8003180C5 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				A72769D41CCBBAE700EFEE28 /* Assets.xcassets */,
 				A72769D61CCBBAE700EFEE28 /* LaunchScreen.storyboard */,
 				A72769D91CCBBAE700EFEE28 /* Info.plist */,
+				A7F4E6AA1CEDE4130077EDE3 /* GoogleService-Info.plist */,
 			);
 			path = "bensocial-showcase-dev";
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72769E71CCBBD5500EFEE28 /* NotoSans-Bold.ttf in Resources */,
+				A7F4E6AB1CEDE4130077EDE3 /* GoogleService-Info.plist in Resources */,
 				A72769D81CCBBAE700EFEE28 /* LaunchScreen.storyboard in Resources */,
 				A72769E81CCBBD5500EFEE28 /* NotoSans-BoldItalic.ttf in Resources */,
 				A72769E91CCBBD5500EFEE28 /* NotoSans-Italic.ttf in Resources */,
@@ -448,6 +452,7 @@
 			baseConfigurationReference = 26FF10B777C32BD77271FF89 /* Pods-bensocial-showcase-dev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,6 +471,7 @@
 			baseConfigurationReference = B7BE4CC4BEFD126FFD9EB8CD /* Pods-bensocial-showcase-dev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

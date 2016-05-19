@@ -6,7 +6,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'bensocial-showcase-dev' do
-pod 'Firebase', '>= 2.5.1'
+pod 'Firebase'
 pod 'Alamofire', '~> 3.3'
 
 end

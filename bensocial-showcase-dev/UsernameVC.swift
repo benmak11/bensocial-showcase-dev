@@ -28,7 +28,7 @@ class UsernameVC: UIViewController {
             
             username.observeSingleEventOfType(.Value, withBlock: { snap in
             
-                if let usernameDoesNotExist = snap.value as? NSNull {
+                if (snap.value as? NSNull) != nil {
                     
                     let currentUser = DataService.ds.REF_USER_CURRENT.childByAppendingPath("username")
                     

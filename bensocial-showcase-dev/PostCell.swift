@@ -76,7 +76,7 @@ class PostCell: UITableViewCell {
         
         likeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
-            if let doesNotExist = snapshot.value as? NSNull {
+            if (snapshot.value as? NSNull) != nil {
                 
                 //This means we have not liked this specific post
                 self.likeImage.image = UIImage(named: "heart-empty")
@@ -93,7 +93,7 @@ class PostCell: UITableViewCell {
         
         likeRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             
-            if let doesNotExist = snapshot.value as? NSNull {
+            if (snapshot.value as? NSNull) != nil {
                 
                 self.likeImage.image = UIImage(named: "heart-full")
                 self.post.adjustLikes(true)
